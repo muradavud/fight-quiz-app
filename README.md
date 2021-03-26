@@ -1,4 +1,17 @@
-# QuizApp
+# FightQuiz (Ongoing)
+
+Generating random questions from UFC fight dataset (for backend repo see https://github.com/muradavud/fight-quiz-backend).
+Current features:
+- Fully functinal quiz with random questions
+
+Planned features:
+- Spring Security authentication
+- Different types of questions
+- Question filters: by type, date, fighter, location etc.
+- More responsive UI
+
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.4.
 
