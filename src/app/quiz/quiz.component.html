@@ -1,0 +1,96 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col p-0" style="z-index: 1; position: relative;">
+            <div class="" style="position: absolute; bottom: 0px; right: 0px;">
+                <img class="img-fluid" [src]='image0' alt="">
+                <div class="spinner-border text-light" [hidden]='!spinner0' role="status"
+                    style="position: absolute; top: 50%; right: 50%;">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+        </div>
+        <div class="col text-center h-100 p-0" style="z-index: 0; margin-left: -1rem; margin-right: -1rem;">
+            <!-- <h1 style="margin: -10rem">VS</h1> -->
+            <div class="container grad-dark p-1">
+                <div class="row">
+                    <div class="col">
+                        <p class="weightclass m-0">{{question.fight.weightclass}}</p>
+                        <hr
+                            style="border: 1px solid darkred; margin-left: 10vw; margin-right: 10vw; margin-top: 0rem; margin-bottom: 0px;">
+                        <p class="mid-stat" style="font-style: italic;">BOUT</p>
+                    </div>
+                </div>
+                <div class="row m-2 pt-2 pb-2 grad-light">
+                    <div class="col p-0 d-flex align-items-center justify-content-center">
+                        <span class="stat">{{question.fight.r_age}}</span>
+                    </div>
+                    <div class="col p-0 d-flex align-items-center justify-content-center">
+                        <span class="mid-stat">AGE</span>
+                    </div>
+                    <div class="col p-0 d-flex align-items-center justify-content-center">
+                        <span class="stat">{{question.fight.b_age}}</span>
+                    </div>
+                </div>
+                <div class="row m-2 pt-2 pb-2 grad-light">
+                    <div class="col p-0 d-flex align-items-center justify-content-center">
+                        <span class="stat">{{question.fight.r_height}}</span>
+                    </div>
+                    <div class="col p-0 d-flex align-items-center justify-content-center">
+                        <span class="mid-stat">HEIGHT</span>
+                    </div>
+                    <div class="col p-0 d-flex align-items-center justify-content-center">
+                        <span class="stat">{{question.fight.b_height}}</span>
+                    </div>
+                </div>
+                <div class="row m-2 pt-2 pb-2 grad-light">
+                    <div class="col p-0 d-flex align-items-center justify-content-center">
+                        <span class="stat">{{question.fight.r_weight}}</span>
+                    </div>
+                    <div class="col p-0 d-flex align-items-center justify-content-center">
+                        <span class="mid-stat">WEIGHT</span>
+                    </div>
+                    <div class="col p-0 d-flex align-items-center justify-content-center">
+                        <span class="stat">{{question.fight.b_weight}}</span>
+                    </div>
+                </div>
+                <div class="row m-2 pt-2 pb-2 grad-light">
+                    <div class="col p-0 d-flex align-items-center justify-content-center">
+                        <span class="stat">{{question.fight.r_reach}}</span>
+                    </div>
+                    <div class="col p-0 d-flex align-items-center justify-content-center">
+                        <span class="mid-stat">REACH</span>
+                    </div>
+                    <div class="col p-0 d-flex align-items-center justify-content-center">
+                        <span class="stat">{{question.fight.b_reach}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col p-0" style="z-index: 1; position: relative;">
+            <div class="" style="position: absolute; bottom: 0px; left: 0px;">
+                <img class="img-fluid flip-horizontally " [src]='image1' alt="">
+                <div class="spinner-border text-light" [hidden]='!spinner1' role="status"
+                    style="position: absolute; top: 50%; left: 50%;">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="grad-light pb-1">
+        <div class="row mb-1">
+            <div class="col text-center grad-dark p-3">
+                <h6 style="color: white; margin: 0rem;">{{question.question}}</h6>
+            </div>
+        </div>
+        <div class="row justify mb-1">
+            <button #buttons [name]="option" class="btn btn-primary m-1" *ngFor='let option of question.options'
+                (click)='onAnswer($event)'>{{option}}</button>
+        </div>
+        <div class="row justify mb-1">
+            <button type="button" class="btn btn-dark" *ngIf="isAnswered"
+                (click)="onNextQuestion()">Next</button>
+        </div>
+    </div>
+
+</div>

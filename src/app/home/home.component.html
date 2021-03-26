@@ -1,0 +1,11 @@
+<div class="d-flex justify-content-center" >
+    <div class="container text-center grad-dark p-5 mt-5" style="width: 20rem;">
+        <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+            <label style="color:white;">Number of questions : <span>{{form.value.number}}</span></label>
+        <input type="range" class="custom-range" min="1" max="5" name="number" 
+         ngModel>
+        <button type="submit" class="btn btn-primary" [disabled]="!(form.value.number != '')">Start Quiz</button>
+        </form>
+        
+    </div>
+</div>

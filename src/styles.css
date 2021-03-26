@@ -1,1 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+.main{ 
+    background: url(assets/img/ufc_barclays.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: auto;
+  }
+
+  html, body {
+    height: 100%;
+  }
+  
+  .full-height {
+    height: calc(100% - 60px);
+    max-height: calc(100% - 60px);
+  }
+
+  .ufc-font {
+    font-family: KlavikaWebCondensed,"Arial Narrow",Arial,sans-serif;
+    letter-spacing: -.1rem;
+  }
+
+  .grad-dark {
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(48,48,50,1) 100%);
+  }
+
+  .grad-light {
+    background: rgb(66,68,72);
+    background: linear-gradient(0deg, rgba(66,68,72,1) 0%, rgba(85,86,93,1) 100%);
+  }
+
+
+  .mid-stat {
+    font-family: KlavikaWebCondensed,"Arial Narrow",Arial,sans-serif;
+    color: gray;
+    font-weight: 600;
+    /* font-size: 1.1rem; */
+    font-size: 2vw;
+}
+
+.stat {
+    font-family: KlavikaWebCondensed,"Arial Narrow",Arial,sans-serif;
+    color: white;
+    /* font-size: 1.3rem; */
+    font-size: 2.3vw;
+    font-weight: 700;
+}
+
+.weightclass {
+    font-family: KlavikaWebCondensed,"Arial Narrow",Arial,sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    color: white;
+    font-size: 3vw;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
+
+.white {
+    color: white;
+}
